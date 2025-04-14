@@ -37,8 +37,6 @@ def save_score(conn, user_id, level, score):
     cur.execute("INSERT INTO user_scores (user_id, level, score) VALUES (%s, %s, %s)", (user_id, level, score))
     conn.commit()
 
-
-
 pygame.init()
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 400
