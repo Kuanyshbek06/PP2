@@ -2,7 +2,6 @@ import psycopg2
 import csv
 from config import load_config as config
 
-
 def create_table():
     command = '''
     CREATE TABLE IF NOT EXISTS phonebook (
