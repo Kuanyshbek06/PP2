@@ -15,7 +15,7 @@ def config(filename='database.ini', section='postgresql'):
     return db
 
 def connect():
-    return psycopg2.connect(**config())
+    return psycopg2.connect(**config()) 
 
 def get_or_create_user(conn, username):
     cur = conn.cursor()
@@ -57,7 +57,7 @@ font = pygame.font.SysFont('Arial', 20)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Snake Game with PostgreSQL")
 
-# ============ GAME CLASSES ============
+
 
 class Snake:
     def __init__(self):
@@ -109,7 +109,6 @@ class Food:
     def draw(self, surface):
         pygame.draw.rect(surface, self.color, pygame.Rect(self.position[0], self.position[1], GRID_SIZE, GRID_SIZE))
 
-# ============ MAIN GAME LOOP ============
 
 def game_loop(user_id, conn, start_level=1, start_score=0):
     snake = Snake()
