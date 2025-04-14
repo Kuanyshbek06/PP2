@@ -4,7 +4,6 @@ import sys
 import psycopg2
 import configparser
 
-
 def config(filename='database.ini', section='postgresql'):
     parser = configparser.ConfigParser()
     parser.read(filename)
